@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import PropTypes from 'prop-types';
 import Tabs from "./Tabs";
 import Cards from "./Cards";
 
@@ -43,12 +43,11 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    if (this.state.selected === "all") {
-      return this.state.cards;
-    } else {
-      return this.state.cards.filter(card => card.tab === this.state.selected);
-    }
-    // return this.state.cards;
+   if (this.state.selected === 'all') {
+     return this.state.cards;
+   } else {
+     return this.state.cards.filter(card => card.tab === this.state.selected)
+   }
   };
 
   render() {
@@ -69,3 +68,16 @@ export default class Content extends Component {
     );
   }
 }
+
+Content.propTypes = {
+  selected: PropTypes.string,
+  tabs: PropTypes.arrayOf(PropTypes.string),
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      headline: PropTypes.string.isRequired,
+      tab: PropTypes.string.isRequired,
+      img: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired
+    })
+  )
+};
