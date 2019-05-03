@@ -29,9 +29,24 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+PropTypes are used to ensure the `type` of data being passed around throughout an application. It is a way for React Developers to catch bugs before they become a problem.
+
 - [ ] Describe a life-cycle event in React?
+
+A lifecycle in `React` is a simple set of phases in a component's life. An example of one of these phases is the Mounting Phase (which can be though of as the birth of a component) is when the component is being built out from the ground up. This is the phase when the initial data is defined in the constructor, the render method is invoked, and `componentDidMount` gets called.
+
 - [ ] Explain the details of a Higher Order Component?
+
+A Higher Order Component allows a developer to reuse component logic. It is a function that receives a component as an argument and returns a new component. It can be used to share information and functionality, as well as a container for other components.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+`Vanilla CSS` - This may seem like an easy way to style components because it's the first thing we're all taught about styling. It's consistent and straight forward no matter the type of the application that is being developed.
+
+`Styled Components` - Styled components have principles similar to CSS, so it is easy to learn and get used to. SC allows developers to style components directly in JS, which can make the code much cleaner and easier to reference and read.
+
+`Bootstrap` - Bootstrap is a library that contains various JS component templates that developers can place directly in their code. It is already styled and formatted, so the developer can build an application much easier and quicker without having to worry about the basic functionality of a given component.
 
 ## Project Setup
 
